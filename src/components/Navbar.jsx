@@ -3,11 +3,10 @@ import { Brain, Menu, X } from 'lucide-react';
 
 const links = [
   { href: '#home', label: 'Home' },
-  { href: '#about', label: 'About Farah Najwa' },
-  { href: '#education', label: 'Education & Achievements' },
-  { href: '#research', label: 'Research & Projects' },
-  { href: '#skills', label: 'Skills & Competencies' },
-  { href: '#extracurricular', label: 'Extracurricular & Volunteering' },
+  { href: '#about', label: 'About' },
+  { href: '#education', label: 'Education' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' },
 ];
 

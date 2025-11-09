@@ -1,4 +1,4 @@
-import { BookOpen, Award, FlaskConical, Layers, Users, Mail, Link as LinkIcon, Image as ImageIcon, FileText } from 'lucide-react';
+import { BookOpen, Award, FlaskConical, Layers, Mail, Image as ImageIcon, FileText } from 'lucide-react';
 
 function Section({ id, icon: Icon, title, children, subtitle }) {
   return (
@@ -28,8 +28,8 @@ export function AboutSection() {
     <Section
       id="about"
       icon={BookOpen}
-      title="About Farah Najwa"
-      subtitle="Formal profile photo and a concise academic statement."
+      title="About"
+      subtitle="Formal profile photo and concise academic summary."
     >
       <div className="lg:col-span-1">
         <div className="aspect-[3/4] w-full rounded-lg border border-neutral-200 bg-neutral-50 flex items-center justify-center text-neutral-500">
@@ -40,12 +40,12 @@ export function AboutSection() {
       <div className="lg:col-span-2">
         <div className="prose prose-neutral max-w-none">
           <p className="text-neutral-700 leading-relaxed">
-            Brief academic introduction outlining interests in cognitive psychology, developmental science, and research methodology. Include motivations, career aspirations, and relevant strengths such as analytical thinking, empathy, and attention to detail.
+            Introduce Farah Najwa, her motivation to pursue psychology, areas of interest (e.g., cognition, development), and relevant strengths such as critical thinking, empathy, and research curiosity.
           </p>
           <ul className="mt-4 list-disc pl-5 text-neutral-700">
-            <li>Clear objective: admission to a psychology undergraduate programme</li>
-            <li>Values: ethical practice, evidence-based reasoning, inclusive perspectives</li>
-            <li>Highlight: key experiences that shaped interest in human behaviour</li>
+            <li>Academic focus and goals</li>
+            <li>Key experiences that sparked interest</li>
+            <li>Ethical, evidence-based perspective</li>
           </ul>
         </div>
       </div>
@@ -58,13 +58,13 @@ export function EducationSection() {
     <Section
       id="education"
       icon={Award}
-      title="Education & Academic Achievements"
-      subtitle="Schools, qualifications, standardized tests, awards, and certificates."
+      title="Education"
+      subtitle="Schools, qualifications, awards, and certificates."
     >
-      <Card title="Secondary Education" caption="Institution, years, key subjects, notable results.">
+      <Card title="Secondary Education" caption="Institution, years, subjects, notable results.">
         <AttachmentPlaceholders />
       </Card>
-      <Card title="Academic Awards" caption="Scholarships, dean's lists, olympiads, etc.">
+      <Card title="Awards & Distinctions" caption="Scholarships, academic prizes, competitions.">
         <AttachmentPlaceholders />
       </Card>
       <Card title="Certificates" caption="Upload links to PDF certificates or scanned documents.">
@@ -74,21 +74,21 @@ export function EducationSection() {
   );
 }
 
-export function ResearchSection() {
+export function ProjectsSection() {
   return (
     <Section
-      id="research"
+      id="projects"
       icon={FlaskConical}
-      title="Research & Psychology Projects"
-      subtitle="Abstracts, roles, methods, findings, and ethical considerations."
+      title="Projects"
+      subtitle="Research abstracts, roles, methods, and outcomes."
     >
-      <Card title="Independent Study" caption="Short abstract, methodology, instruments used, and results summary.">
+      <Card title="Independent Study" caption="Abstract, methodology, instruments, results summary.">
         <LinkPlaceholder />
       </Card>
-      <Card title="Collaborative Project" caption="Team size, responsibilities, data collection approach, analysis tools.">
+      <Card title="Collaborative Project" caption="Team, responsibilities, data collection, analysis tools.">
         <LinkPlaceholder />
       </Card>
-      <Card title="Poster/Presentation" caption="Conference or school fair; include a link to poster or slides.">
+      <Card title="Poster/Presentation" caption="Conference or school fair; include link to poster or slides.">
         <LinkPlaceholder />
       </Card>
     </Section>
@@ -100,15 +100,15 @@ export function SkillsSection() {
     <Section
       id="skills"
       icon={Layers}
-      title="Skills & Competencies"
-      subtitle="Research methods, statistics, communication, and technical tools."
+      title="Skills"
+      subtitle="Research methods, analysis, communication, and tools."
     >
       <div className="lg:col-span-2">
         <div className="grid sm:grid-cols-2 gap-4">
-          <TagGroup title="Research & Methods" tags={["Literature review", "Experimental design", "Ethics & consent", "Survey construction"]} />
+          <TagGroup title="Research & Methods" tags={["Literature review", "Experimental design", "Ethics & consent", "Survey design"]} />
           <TagGroup title="Data & Analysis" tags={["SPSS", "JASP", "Excel", "Qualitative coding"]} />
           <TagGroup title="Communication" tags={["Academic writing", "Presentations", "Facilitation", "Report structuring"]} />
-          <TagGroup title="Soft Skills" tags={["Empathy", "Attention to detail", "Team collaboration", "Time management"]} />
+          <TagGroup title="Soft Skills" tags={["Empathy", "Attention to detail", "Teamwork", "Time management"]} />
         </div>
       </div>
       <div className="lg:col-span-1">
@@ -124,43 +124,19 @@ export function SkillsSection() {
   );
 }
 
-export function ExtracurricularSection() {
-  return (
-    <Section
-      id="extracurricular"
-      icon={Users}
-      title="Extracurricular & Volunteer Experience"
-      subtitle="Leadership, community service, clubs, and outreach."
-    >
-      <Card title="Peer Counselling Club" caption="Role, activities, impact metrics.">
-        <AttachmentPlaceholders />
-      </Card>
-      <Card title="Community Volunteering" caption="Organisation, responsibilities, hours contributed.">
-        <AttachmentPlaceholders />
-      </Card>
-      <Card title="Workshops & Events" caption="Organised or attended; include certificates if available.">
-        <AttachmentPlaceholders />
-      </Card>
-    </Section>
-  );
-}
-
 export function ContactSection() {
   return (
     <Section
       id="contact"
       icon={Mail}
-      title="Contact Information"
+      title="Contact"
       subtitle="Professional channels for outreach."
     >
-      <div className="lg:col-span-2">
-        <div className="grid sm:grid-cols-2 gap-4">
-          <Field label="Email" value="farah.najwa@example.com" />
-          <Field label="Phone" value="(+60) 12 345 6789" />
-          <Field label="Location" value="Kuala Lumpur, Malaysia" />
-          <Field label="LinkedIn" value="linkedin.com/in/farah-najwa" icon={<LinkIcon className=\"h-4 w-4\" />} />
-        </div>
-        <p className="mt-3 text-xs text-neutral-500">Please use professional language and include your purpose when reaching out.</p>
+      <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
+        <Field label="Email" value="farah.najwa@example.com" />
+        <Field label="Phone" value="(+60) 12 345 6789" />
+        <Field label="Location" value="Kuala Lumpur, Malaysia" />
+        <Field label="LinkedIn" value="linkedin.com/in/farah-najwa" />
       </div>
       <div className="lg:col-span-1" id="cv">
         <Card title="Curriculum Vitae" caption="Provide a downloadable PDF.">
@@ -169,7 +145,7 @@ export function ContactSection() {
             className="inline-flex items-center gap-2 rounded-md bg-neutral-900 text-white px-4 py-2 text-sm font-medium hover:bg-neutral-800"
             download
           >
-            <FileText className="h-4 w-4" /> Download Farah Najwa’s CV
+            <FileText className="h-4 w-4" /> Download CV
           </a>
           <p className="mt-2 text-xs text-neutral-500">Replace with a direct link to your CV file.</p>
         </Card>
@@ -204,7 +180,7 @@ function AttachmentPlaceholders() {
 function LinkPlaceholder() {
   return (
     <a href="#" className="inline-flex items-center gap-2 text-neutral-900 hover:underline">
-      <LinkIcon className="h-4 w-4" /> Add link to paper, dataset, or repo
+      Add link to paper, dataset, or repo
     </a>
   );
 }
@@ -224,13 +200,11 @@ function TagGroup({ title, tags }) {
   );
 }
 
-function Field({ label, value, icon }) {
+function Field({ label, value }) {
   return (
     <div className="rounded-lg border border-neutral-200 p-4 bg-white">
       <p className="text-xs uppercase tracking-wide text-neutral-500">{label}</p>
-      <div className="mt-1 flex items-center gap-2 text-neutral-900">
-        {icon} <span className="text-sm break-all">{value}</span>
-      </div>
+      <div className="mt-1 text-neutral-900 text-sm break-all">{value}</div>
     </div>
   );
 }

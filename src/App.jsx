@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import { AboutSection, EducationSection, ResearchSection, SkillsSection, ExtracurricularSection, ContactSection } from './components/Sections';
+import { AboutSection, EducationSection, ProjectsSection, SkillsSection, ContactSection } from './components/Sections';
 
 function App() {
   return (
@@ -11,9 +11,8 @@ function App() {
         <Hero />
         <AboutSection />
         <EducationSection />
-        <ResearchSection />
+        <ProjectsSection />
         <SkillsSection />
-        <ExtracurricularSection />
         <ContactSection />
       </main>
       <Footer />
